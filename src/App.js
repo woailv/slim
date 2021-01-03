@@ -1,25 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import EditShowItem from "./component/EditShowItem";
+import React, {Component} from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+    state={
+        showBar: false,
+        isLoading:false
+    }
+    render() {
+        return (
+            <div className="App-header" onClick={()=>this.setState({showBar:false})}>
+                <EditShowItem showBar={this.state.showBar} showBarFunc={()=> {
+                    this.setState({showBar: true})
+                }} onSave={(text)=> {
+                    console.log(text)
+                    this.setState({isLoading:true})
+                    setTimeout(()=>this.setState({isLoading:false}),1000)
+                }} isLoading={this.state.isLoading}/>
+            </div>
+        );
+    }
 }
 
 export default App;

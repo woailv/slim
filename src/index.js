@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import EditShowItem from "./component/EditShowItem";
+import App from "./App";
 
 ReactDOM.render(
-  <EditShowItem/>,
+    <App/>,
   document.getElementById('root')
 );
 
