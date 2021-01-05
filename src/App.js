@@ -1,6 +1,7 @@
 import './App.css';
 import EditShowItem from "./component/EditShowItem";
 import React, {Component} from "react";
+import EditShowItemWithHead from "./component/EditShowItemWithHead";
 
 class App extends Component {
     state={
@@ -17,6 +18,8 @@ class App extends Component {
                     this.setState({isLoading:true})
                     setTimeout(()=>this.setState({isLoading:false}),1000)
                 }} isLoading={this.state.isLoading}/>
+
+                <EditShowItemWithHead/>
             </div>
         );
     }
