@@ -2,23 +2,27 @@ import React from "react";
 import 'bulma'
 
 class EditShowItem extends React.Component {
-   state={
-       text:""
-   }
+    state = {
+        text: "",
+        showBar: false
+    }
+
     render() {
         return (
-            <div style={{textAlign: "right"}} onClick={(e) => e.stopPropagation()}>
-                <textarea value={this.state.text} placeholder={"新建一条数据"} rows="2" class={"textarea"} onFocus={() => this.props.showBarFunc()}
-                onChange={(e)=>this.setState({text:e.target.value})}/>
+            <div style={{textAlign: "right"}}>
+                <textarea value={this.state.text} placeholder={"新建一条数据"} rows="2" class={"textarea"}
+                          onFocus={() => this.setState({showBar: true})}
+                          onBlur={() => this.setState({showBar: false})}//需要和button组合判断是否设置为false
+                          onChange={(e) => this.setState({text: e.target.value})}/>
                 <div style={{
                     borderStyle: "solid",
                     borderWidth: "0px 1px 1px 1px",
                     borderColor: "blue",
-                    display: this.props.showBar ? "block" : "none"
+                    display: this.state.showBar ? "block" : "none"
                 }}>
-                    <button class={["button is-info", this.props.isLoading?"is-loading":""].join(" ")} style={{textAlign: "right"}} disabled={this.props.isLoading}
+                    <button class={["button is-info",].join(" ")} style={{textAlign: "right"}}
                             onClick={() => {
-                                this.props.onSave(this.state.text)
+                                // this.props.onSave(this.state.text)
                             }}>保存
                     </button>
                 </div>
@@ -27,4 +31,5 @@ class EditShowItem extends React.Component {
     }
 }
 
+// this.props.isLoading?"is-loading":""
 export default EditShowItem
