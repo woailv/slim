@@ -4,15 +4,18 @@ import 'bulma'
 class EditShowItem extends React.Component {
     state = {
         text: "",
+        mouseIn: false,
         showBar: false
     }
 
     render() {
         return (
-            <div style={{textAlign: "right"}}>
+            <div style={{textAlign: "right"}}
+                 onMouseOver={() => this.setState({mouseIn: true})}
+                 onMouseOut={() => this.setState({mouseIn: false})}>
                 <textarea value={this.state.text} placeholder={"新建一条数据"} rows="2" class={"textarea"}
                           onFocus={() => this.setState({showBar: true})}
-                          onBlur={() => this.setState({showBar: false})}//需要和button组合判断是否设置为false
+                          onBlur={() => this.setState({showBar: this.state.mouseIn || false})}//需要和button组合判断是否设置为false
                           onChange={(e) => this.setState({text: e.target.value})}/>
                 <div style={{
                     borderStyle: "solid",
