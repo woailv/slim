@@ -2,17 +2,21 @@ import React from "react";
 import EditShowItem from "./EditShowItem";
 
 class EditShowItemWithHead extends React.Component {
-    state={
-        showBar:false
+    state = {
+        showBar: true
     }
+
     render() {
         return (
-            <div>
+            <div class={"App-header"} onClick={() => this.setState({showBar: false})}>
                 <span>操作</span>
                 <EditShowItem
                     showBar={this.state.showBar}
-                    showBarFunc={()=>{this.setState({showBar:true})}}
-                    onSave={()=>{}}
+                    onClick={() => {
+                        this.setState({showBar: true})
+                    }}
+                    onSave={() => {
+                    }}
                 />
             </div>
         )

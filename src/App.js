@@ -9,10 +9,20 @@ import React, {Component} from "react";
 // ]
 
 class App extends Component {
+    state = {
+        showBar: false
+    }
     render() {
         return (
             <div className="App-header" onClick={() => this.setState({showBar: false})}>
-                <EditShowItem/>
+                <EditShowItem
+                    showBar={this.state.showBar}
+                    onItemClick={() => {
+                        this.setState({showBar: true})
+                    }}
+                    onSave={() => {
+                    }}
+                />
 
 
                 {/*<EditShowItemWithHead/>*/}
