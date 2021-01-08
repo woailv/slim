@@ -4,16 +4,16 @@ import 'bulma'
 class EditShowItem extends React.Component {
     state = {
         text: "",
+        saving:false,
     }
 
     render() {
         return (
             <div style={{textAlign: "right"}}
-                 onClick={(event)=> {
+                 onClick={(event) => {
                      event.stopPropagation()
                      this.props.onItemClick()
-                 }}
-            >
+                 }}>
                 <textarea
                     value={this.state.text} placeholder={"新建一条数据"}
                     rows="2" class={"textarea"}
@@ -27,9 +27,15 @@ class EditShowItem extends React.Component {
                         display: this.props.showBar ? "block" : "none"
                     }}
                 >
-                    <button class={["button is-info",].join(" ")} style={{textAlign: "right"}}
+                    <button class={["button is-info",this.state.saving?"is-loading":""].join(" ")} style={{textAlign: "right"}}
                             onClick={() => {
-                                // this.props.onSave(this.state.text)
+                                this.setState({saving:true})
+                                let that = this
+                                async function saving(){
+                                    await that.props.onSaveClick(that.state.text);
+                                    that.setState({saving:false})
+                                }
+                                saving()
                             }}>
                         保存
                     </button>

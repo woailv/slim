@@ -20,7 +20,10 @@ class App extends Component {
                     onItemClick={() => {
                         this.setState({showBar: true})
                     }}
-                    onSave={() => {
+                    onSaveClick={() => {
+                        return new Promise(function (resolve, reject) {
+                            setTimeout(()=>{resolve(1)},1000)
+                        })
                     }}
                 />
 
