@@ -13,6 +13,11 @@
     <list default="true" id="ce07514a-eb59-4b3d-9833-62137281fcc6" name="Default Changelist" comment="1">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/EditShowItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/EditShowItem.js" afterDir="false" />
+>>>>>>> 6aea90ab10d3236dbdc51a55667331326f9900fc
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,23 +27,35 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Go File" />
         <option value="JavaScript File" />
       </list>
     </option>
   </component>
+  <component name="GOROOT" url="file:///usr/local/go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1mXcssOKCDycm2HlB8CGsSH9tvv" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+<<<<<<< HEAD
+=======
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+>>>>>>> 6aea90ab10d3236dbdc51a55667331326f9900fc
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -110,6 +127,7 @@
     <MESSAGE value="1" />
     <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
+<<<<<<< HEAD
   <component name="WindowStateProjectService">
     <state width="1419" height="97" key="GridCell.Tab.0.bottom" timestamp="1610158536393">
       <screen x="0" y="0" width="1440" height="870" />
@@ -136,4 +154,6 @@
     </state>
     <state x="312" y="167" key="Vcs.Push.Dialog.v2/0.0.1440.870@0.0.1440.870" timestamp="1609682979455" />
   </component>
+=======
+>>>>>>> 6aea90ab10d3236dbdc51a55667331326f9900fc
 </project>
